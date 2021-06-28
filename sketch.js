@@ -2,6 +2,7 @@ var gameState = 0;
 var contestantCount, database, quiz, question, contestant;
 var quiz;
 var database;
+var allContestants;
 
 function setup(){
   canvas = createCanvas(850,400);
@@ -15,6 +16,11 @@ function setup(){
 
 function draw(){
   background("pink");
-
-  
+  if(contestantCount === 2) {
+    quiz.update(1);
+  }
+  if(gameState === 1) {
+    clear();
+    quiz.play();
+  }
 }

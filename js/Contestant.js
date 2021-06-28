@@ -28,7 +28,7 @@ class Contestant {
   
     static getContestantInfo() {
       var contestantInfoRef = database.ref('contestants');
-      contestantInfo.on("value",(data)=>{
+      contestantInfoRef.on("value",(data)=>{
         allContestants = data.val();
       })
     }
